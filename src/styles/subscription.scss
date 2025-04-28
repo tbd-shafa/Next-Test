@@ -1,0 +1,53 @@
+.subscription-card {
+  transition: transform 0.3s ease;
+  box-shadow: 0px 3px 6px #00000029;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .badge {
+    font-size: 0.72rem;
+    padding: 0.5em 1em;
+    border-radius: 20px;
+  }
+
+  .feature-item {
+    font-size: 0.95rem;
+
+    svg {
+      font-size: 1.15rem;
+    }
+  }
+
+  button {
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+  &.Starter{
+    button{
+      &.plan-purchase-btn{
+         display: none;
+      }
+    }
+  }
+  &.Advanced{
+    button{
+      color: #fff !important;
+      &.plan-purchase-btn{
+        color: #fff !important;
+      }
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .subscription-card {
+    margin-bottom: 2rem;
+  }
+}
